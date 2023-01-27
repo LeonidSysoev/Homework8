@@ -13,6 +13,8 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
+        task4();
     }
 
     public static void task1() {
@@ -43,5 +45,26 @@ public class Main {
         System.out.println(Arrays.toString(array));
         System.out.println("Максимальная трата за день составила " + maxExpense + " рублей. " +
                 "Минимальная трата за день составила " + minExpense + " рублей.");
+    }
+
+    public static void task3() {
+        System.out.println("Задача 3");
+        int[] array = generateRandomArray();
+        int expense = 0;
+        for (int i : array) {
+            expense += i;
+        }
+        float mediumExpense = (float) expense / array.length;
+        System.out.println(Arrays.toString(array));
+        System.out.println("Средняя сумма трат за месяц составила " + mediumExpense + " рублей.");
+    }
+
+    public static void task4() {
+        System.out.println("Задача 4");
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+        }
+        System.out.println();
     }
 }
